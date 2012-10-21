@@ -154,10 +154,11 @@ class Controller_Default_Payment extends Controller_Abstract
                 $order->status   = 'pending';
                 $order->save();
             }
-
+            
+            $buyer_email = $order->account->user_mail;
             if(Q::ini('appini/email_notify'))
             {
-                Mail_Api::send('['. Q::ini('appini/meta/title') .']'.$order->name.'的账单状态['. strip_tags($rs->status(false)) .']','当前状态：' . $rs->status(false). ' 详情请登陆系统查看：'. Q::ini('appini/meta/url') .'/service/invoice',$order->account->user_mail,'客户');
+                Mail_Api::send('['. Q::ini('appini/meta/title') .']'.$order->name.'的账单状态['. strip_tags($rs->status(false)) .']','当前状态：' . $rs->status(false). ' 详情请登陆系统查看：'. Q::ini('appini/meta/url') .'/service/invoice',$buyer_email,'客户');
             }
 
             if($_POST['trade_status'] == 'WAIT_BUYER_PAY') {
@@ -243,6 +244,14 @@ class Controller_Default_Payment extends Controller_Abstract
                     
                     $order->status = 'approve';
                     $order->save();
+                    
+                    /*
+                    if(Q::ini('appini/email_order_recv'))
+                    {
+                        Mail_Api::send('[收款通知]您收到来自'.$buyer_email.'的付款',Q::ini('appini/email_order_recv'),'站长');
+                    }
+                    */
+
                 }
 
                 echo "success";		//请不要修改或删除

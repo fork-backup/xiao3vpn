@@ -20,6 +20,6 @@ http://www.xiao3.org
 1、此程序未经严格测试，切勿用于正式的商业环境，无视此警告导致任何损失与本作者无关。<br />
 2、此程序侧重于VPN帐号管理，简单的订单账单系统，对于Free Radius仅仅提供简单的设置，任何关于Free Radius的设置、配置问题请自行查阅其他资料。<br />
 
-技术支持：http://www.xiao3.org xiao3vv#gmail.com<br />
+技术支持：http://vpn.xiao3.org xiao3vv#gmail.com<br />
 
 

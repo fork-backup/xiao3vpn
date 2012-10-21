@@ -35,7 +35,7 @@
         <?php $this->_block('contents'); ?><?php $this->_endblock(); ?>
     </div>
     <div class="copyright">&copy; 2012 <?=Q::ini('appini/meta/title');?></div>
-    <?=Q::ini('appini/analytics');?>
+    <?= ($_USER_ID == 1) ? '':Q::ini('appini/analytics');?>
 </div>
 </body>
 </html>

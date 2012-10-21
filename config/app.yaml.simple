@@ -40,6 +40,8 @@ email_activate: true
 #邮件通知开关 true | false
 email_notify: true
 
+#收款通知接收 邮件地址 | false
+email_order_recv: false
 
 #网站设置，域名结尾不含 / 
 meta:
