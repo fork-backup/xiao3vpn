@@ -27,12 +27,12 @@ class Controller_Default_Payment extends Controller_Abstract
 
  
             $receive_name		= $this->_user_name;
-            $receive_address	= "http://www.xiao3.org/service";
+            $receive_address	= Q::ini('appini/meta/url') . "/service";
             $receive_zip		= "";
             $receive_phone		= "";
             $receive_mobile		= $this->_user->user_mail;
 
-            $show_url			= 'http://www.xiao3.org/service';
+            $show_url			= Q::ini('appini/meta/url') . "/service";
 
 
             $root_dir = Q::ini('app_config/ROOT_DIR');
