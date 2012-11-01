@@ -113,6 +113,9 @@ class Controller_Default_Default extends Controller_Abstract
         $form = Form_Common::createForm('','signup');
         if ($this->_context->isPOST() && $form->validate($_POST))
         {
+
+            return $this->msg('关闭注册中。',url('default::default/index'));
+
             $msg = null;
             $post = $form->values();
 
