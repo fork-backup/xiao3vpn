@@ -114,7 +114,7 @@ class Controller_Default_Default extends Controller_Abstract
         if ($this->_context->isPOST() && $form->validate($_POST))
         {
 
-            return $this->msg('关闭注册中。',url('default::default/index'));
+            #return $this->msg('关闭注册中。',url('default::default/index'));
 
             $msg = null;
             $post = $form->values();
