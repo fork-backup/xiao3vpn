@@ -13,7 +13,7 @@ database:
   charset:    utf8
   prefix:
 
-#管理员帐号列表
+#管理员帐号列表,该帐号需要您自己在您的网站注册一个帐号，然后把帐号填写到这里，注册地址 你的域名.com/signup
 managers:
   1: 'admin@gmail.com'
 
